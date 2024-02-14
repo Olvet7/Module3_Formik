@@ -6,14 +6,14 @@ import * as Yup from "yup";
 export const FeedbackForm = () => {
   const FeedbackSchema = Yup.object().shape({
     username: Yup.string()
-      .min(2, "Too Short!")
-      .max(50, "Too Long!")
-      .required("Required"),
-    email: Yup.string().email("Must be a valid email!").required("Required"),
+      .min(2, <span className={css.error}>Too Short!</span>)
+      .max(50, <span className={css.error}>Too Long!</span>)
+      .required(<span className={css.error}>Required</span>),
+    email: Yup.string().email(<span className={css.error}>Must be a valid email!</span>).required(<span className={css.error}>Required</span>),
     message: Yup.string()
-      .min(3, "Too short")
-      .max(256, "Too long")
-      .required("Required"),
+      .min(3, <span className={css.error}>Too Short!</span>)
+      .max(256, <span className={css.error}>Too Long!</span>)
+      .required(<span className={css.error}>Required</span>),
     level: Yup.string().oneOf(["good", "neutral", "bad"]).required("Required"),
   });
 
@@ -55,7 +55,7 @@ export const FeedbackForm = () => {
           name="email"
           id={emailFieldId}
         />
-        <ErrorMessage name="email" as="span" className={css.error}/>
+        <ErrorMessage className={css.error} name="email" as="span"/>
         <label htmlFor={msgFieldId}>Message</label>
         <Field
           className={css.field}
@@ -63,13 +63,13 @@ export const FeedbackForm = () => {
           name="message"
           id={msgFieldId}
         />
-        <ErrorMessage name="message" as="span" className={css.error}/>
+        <ErrorMessage className={css.error} name="message" as="span" />
         <Field as="select" name="level" id={levelFieldId} className={css.select}>
           <option value="good">Good</option>
           <option value="neutral">Neutral</option>
           <option value="bad">Bad</option>
         </Field>
-        <ErrorMessage name="level" as="span" className={css.error}/>
+        <ErrorMessage className={css.error} name="level" as="span"/>
         <button className={css.btn} type="submit">
           Submit
         </button>
