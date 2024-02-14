@@ -1,0 +1,25 @@
+.form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    justify-content: center;
+    align-items: center;
+}
+
+.field {
+    margin-right: 10px;
+    display: block;
+}
+
+.btn {
+    padding: 0 14px;
+  color: #fff;
+    background-color: black;
+    text-transform: uppercase;
+}
+
+.btn:hover {
+    background: gold;
+    color: #000;
+    border: none;
+  }
