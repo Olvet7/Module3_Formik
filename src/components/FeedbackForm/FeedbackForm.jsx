@@ -64,7 +64,7 @@ export const FeedbackForm = () => {
           id={msgFieldId}
         />
         <ErrorMessage name="message" as="span" className={css.error}/>
-        <Field as="select" name="level" id={levelFieldId}>
+        <Field as="select" name="level" id={levelFieldId} className={css.select}>
           <option value="good">Good</option>
           <option value="neutral">Neutral</option>
           <option value="bad">Bad</option>

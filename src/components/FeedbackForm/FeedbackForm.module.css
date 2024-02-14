@@ -1,29 +1,41 @@
 .form {
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
-    justify-content: center;
-    align-items: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: green;
+  max-width: 200px;
 }
 
 .field {
-    margin-right: 10px;
-    display: block;
+  display: block;
+  border: 1px orange dashed;
+  width: 100%;
 }
 
 .btn {
-    padding: 0 14px;
-  color: #fff;
-    background-color: black;
-    text-transform: uppercase;
+  padding: 0 14px;
+  color: green;
+  background-color: orange;
+  text-transform: uppercase;
+  border: none;
+  border-radius: 0%;
+  width: 100%;
 }
 
 .btn:hover {
-    background: gold;
-    color: #000;
-    border: none;
-  }
+  background: gold;
+  color: #000;
+  border: none;
+}
 
 .error {
-    color: orange;
+  color: orange;
 }
+
+.select {
+    margin: 15px 0;
+    width: 100%;
+    border: none;
+}
+
