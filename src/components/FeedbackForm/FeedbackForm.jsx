@@ -55,7 +55,7 @@ export const FeedbackForm = () => {
           name="email"
           id={emailFieldId}
         />
-        <ErrorMessage name="email" as="span" />
+        <ErrorMessage name="email" as="span" className={css.error}/>
         <label htmlFor={msgFieldId}>Message</label>
         <Field
           className={css.field}
@@ -63,13 +63,13 @@ export const FeedbackForm = () => {
           name="message"
           id={msgFieldId}
         />
-        <ErrorMessage name="message" as="span" />
+        <ErrorMessage name="message" as="span" className={css.error}/>
         <Field as="select" name="level" id={levelFieldId}>
           <option value="good">Good</option>
           <option value="neutral">Neutral</option>
           <option value="bad">Bad</option>
         </Field>
-        <ErrorMessage name="level" as="span" />
+        <ErrorMessage name="level" as="span" className={css.error}/>
         <button className={css.btn} type="submit">
           Submit
         </button>
