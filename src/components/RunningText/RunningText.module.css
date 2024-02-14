@@ -22,9 +22,10 @@
 } */
 
 .marquee{
-    width:200px;
+    width:300px;
     white-space:nowrap;
     overflow:hidden;
+    padding-bottom: 30px;
     }
      
     .marquee span {
